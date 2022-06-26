@@ -27,6 +27,11 @@ var (
 )
 
 func main() {
+
+	GetRequest()
+}
+
+func GetRequest() {
 	url := offers.GetLinkOffer(sell, qiwi, pro)
 	resp, err := http.Get(url)
 
@@ -61,4 +66,8 @@ func main() {
 		minLimit := data.LimitMin
 		fmt.Printf("[Price: %.2f, User: %s, LimitMin: %.2f]\n\n", price, user, minLimit)
 	}
+}
+
+func ValueGlass() {
+
 }
